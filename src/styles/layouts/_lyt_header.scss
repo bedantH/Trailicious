@@ -1,0 +1,20 @@
+.lyt_header {
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 3rem 10rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .cart_btn {
+            background-color: #FFA03C;
+            padding: 0.8rem 1rem;
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+        }
+    }
+}

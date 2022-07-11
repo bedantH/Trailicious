@@ -1,0 +1,64 @@
+@import "../components/inputs";
+
+.filter-box__layout {
+    margin-left: 10rem;
+
+    .box__layout__container {
+
+        .container__searchInput {
+            position: relative;
+            width: fit-content;
+
+            .input.search__input {
+                width: 40rem;
+            }
+        }
+
+        .container__filters_wrapper {
+            display: flex;
+            margin-top: 1.4rem;
+            align-items: center;
+
+            .filters_wrapper__byCat {
+                margin-right: 1rem;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Poppins', sans-serif;
+
+                label {
+                    margin-bottom: 0.5rem;
+                }
+
+                select.wrapper__byCat {
+                    width: fit-content;
+                    border-radius: 13px;
+                    padding: 1rem;
+                    background-color: #fff;
+                    padding-right: 10rem;
+                }
+            }
+
+            h3 {
+                margin-right: 2rem;
+            }
+
+            .filters_wrapper__byArea {
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Poppins', sans-serif;
+
+                label {
+                    margin-bottom: 0.5rem;
+                }
+
+                select.wrapper__byArea {
+                    padding: 1rem;
+                    border-radius: 13px;
+                    padding-right: 10rem;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

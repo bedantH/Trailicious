@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 5px;
+  border: 1px solid #a7a7a7;
+  border-radius: 2px;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+.lyt_header .header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3rem 10rem;
+}
+.lyt_header .header__nav h1 {
+  font-size: 2rem;
+}
+.lyt_header .header__nav .cart_btn {
+  background-color: #FFA03C;
+  padding: 0.8rem 1rem;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.input {
+  padding: 1rem;
+  border: 1px solid #a9a9a9;
+  border-radius: 13px;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.input:focus {
+  outline: none;
+}
+.input + span {
+  position: absolute;
+  right: 1rem;
+  top: 52%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-box__layout {
+  margin-left: 10rem;
+}
+.filter-box__layout .box__layout__container .container__searchInput {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.filter-box__layout .box__layout__container .container__searchInput .input.search__input {
+  width: 40rem;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper {
+  display: flex;
+  margin-top: 1.4rem;
+  align-items: center;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper .filters_wrapper__byCat {
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper .filters_wrapper__byCat label {
+  margin-bottom: 0.5rem;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper .filters_wrapper__byCat select.wrapper__byCat {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 13px;
+  padding: 1rem;
+  background-color: #fff;
+  padding-right: 10rem;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper h3 {
+  margin-right: 2rem;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper .filters_wrapper__byArea {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper .filters_wrapper__byArea label {
+  margin-bottom: 0.5rem;
+}
+.filter-box__layout .box__layout__container .container__filters_wrapper .filters_wrapper__byArea select.wrapper__byArea {
+  padding: 1rem;
+  border-radius: 13px;
+  padding-right: 10rem;
+  background-color: #fff;
+}
+
+.card {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.3rem;
+  max-width: 30rem;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.card .card_banner img {
+  width: 100%;
+  height: 20rem;
+  border-top-left-radius: 1.3rem;
+  border-top-right-radius: 1.3rem;
+}
+.card .card_info {
+  padding: 1rem 2rem;
+}
+.card .card_info .card_rent {
+  color: #000;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  padding-bottom: 3rem;
+}
+.card .card_info .card_rent span {
+  color: #989AAF;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+.card_display__Layout ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 85vw;
+  margin: auto;
+  grid-gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}/*# sourceMappingURL=global.css.map */
