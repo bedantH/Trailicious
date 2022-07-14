@@ -24,7 +24,7 @@ export default function FilterBox() {
     */
 
     const [categories, setCategories] = useState<Category[]>([]);
-    const [selectedCategory, setSelectedCategory] = useState<String>("");
+    const [selectedCategory, setSelectedCategory] = useState<String>("beef");
     const [selectedFilterType, setSelectedFilterType] = useState<String>("category");
     const [areas, setAreas] = useState<Area[]>([]);
     const [meals, setMeals] = useState<Meal[]>([]);
@@ -51,8 +51,21 @@ export default function FilterBox() {
                 })
         }
 
+        const getMealsData = async (): Promise<any> => {
+            await axios.get("https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef")
+                .then((res) => {
+                    console.table(res.data.meals);
+                    setMeals(res.data.meals);
+                })
+                .catch((err) => {
+                    console.error(err);
+                })
+
+        }
+
         getCategoryData();
         getAreaData();
+        getMealsData();
 
     }, [])
 
@@ -92,7 +105,7 @@ export default function FilterBox() {
                         <div className="filters_wrapper__byCat">
                             <label>Filter Data By</label>
                             <select className="wrapper__byCat" onChange={handleFilterType}>
-                                <option value="category" selected>Category</option>
+                                <option value="category" defaultChecked>Category</option>
                                 <option value="area">Area</option>
                             </select>
                         </div>
@@ -102,15 +115,15 @@ export default function FilterBox() {
                                 {
                                     selectedFilterType === "category"
                                         ?
-                                        categories.map((cat: Category) => {
+                                        categories.map((cat: Category, index) => {
                                             return (
-                                                <option value={cat.strCategory.toLowerCase()} >{cat.strCategory}</option>
+                                                <option key={index} value={cat.strCategory.toLowerCase()} >{cat.strCategory}</option>
                                             )
                                         })
                                         :
-                                        areas.map((cat: Area) => {
+                                        areas.map((cat: Area, index) => {
                                             return (
-                                                <option value={cat.strArea.toLowerCase()} >{cat.strArea}</option>
+                                                <option key={index} value={cat.strArea.toLowerCase()} >{cat.strArea}</option>
                                             )
                                         })
                                 }

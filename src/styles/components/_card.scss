@@ -5,28 +5,115 @@
     position: relative;
     font-family: 'Poppins', sans-serif;
 
-    .card_banner img {
+    .mainUpperLayer{
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 20rem;
-        border-top-left-radius: 1.3rem;
-        border-top-right-radius: 1.3rem;
+        height: 100%;
     }
+
+    .card_banner {
+        position: relative;
+        img {
+            width: 100%;
+            height: 20rem;
+            border-top-left-radius: 1.3rem;
+            border-top-right-radius: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+
+        .card_trend_banner{
+            position: absolute;
+            background-color: #5100C6;
+            color: #fff;
+            z-index: 2;
+            right: 0;
+            top: 2rem;
+            padding: 0.4rem 2rem;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+        }
+
+        .addto_wishlist{
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            bottom: -15px;
+            background-color: #5100C6;
+            color: #fff;
+            border:  none;
+            border-radius: 50%;
+            padding: 1rem 1rem;
+            padding-bottom: 0.8rem;
+        }
+    }
+
 
     .card_info {
         padding: 1rem 2rem;
 
+        .meal_cat{
+            text-transform: capitalize;
+            border: 1px solid #e4e4e4;
+            padding: 0.2rem 1rem;
+            color: #a7a7a7;
+            border-radius: 1.3rem;
+        }
+
         .card_rent {
             color: #000;
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-top: 1rem;
             margin-bottom: 0rem;
-            padding-bottom: 3rem;
+            padding-bottom: 1.5rem;
 
-            span {
-                color: #989AAF;
-                font-size: 1.1rem;
-                margin-left: 0.5rem;
+        }
+        p.meal_desc{
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        p.card_price {
+            color: #010101;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .disp_rece{
+            padding: 0.8rem 2rem;
+            margin-bottom: 1.3rem;
+            background: transparent;
+            border: 1px solid #F8980D;
+            border-radius: 1rem;
+            color: #F8980D;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.8s;
+
+            &:hover{
+                background-color: #F8980D;
+                color: #fff;
             }
         }
+    }
+
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.01);
     }
 }
